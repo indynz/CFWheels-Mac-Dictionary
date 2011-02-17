@@ -89,6 +89,7 @@ code.block {
 	padding-left: 10px;
 	white-space: pre;
 	margin-top: 20px;
+	line-height: 1.5em;
 }
 
 .floatright { 
