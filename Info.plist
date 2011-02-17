@@ -11,9 +11,9 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>DCSDictionaryCopyright</key>
-	<string>Copyright © 2011 ColdFusion on Wheels (cfwheels.org)</string>
+	<string>Copyright © 2011 ColdFusion on Wheels (http://cfwheels.org)</string>
 	<key>DCSDictionaryManufacturerName</key>
-	<string>Indy Nagpal (indy@nagpals.com)</string>
+	<string>Indy Nagpal (http://nagpals.com/)</string>
 	<key>DCSDictionaryFrontMatterReferenceID</key>
 	<string>front_back_matter</string>
 	<key>DCSDictionaryPrefsHTML</key>

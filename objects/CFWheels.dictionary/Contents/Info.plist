@@ -17,7 +17,7 @@
 	<key>DCSDictionaryCSS</key>
 	<string>DefaultStyle.css</string>
 	<key>DCSDictionaryCopyright</key>
-	<string>Copyright © 2011 ColdFusion on Wheels (cfwheels.org)</string>
+	<string>Copyright © 2011 ColdFusion on Wheels (http://cfwheels.org)</string>
 	<key>DCSDictionaryDefaultPrefs</key>
 	<dict>
 		<key>display-column</key>
@@ -32,7 +32,7 @@
 	<key>DCSDictionaryFrontMatterReferenceID</key>
 	<string>front_back_matter</string>
 	<key>DCSDictionaryManufacturerName</key>
-	<string>Indy Nagpal (indy@nagpals.com)</string>
+	<string>Indy Nagpal (http://nagpals.com/)</string>
 	<key>DCSDictionaryPrefsHTML</key>
 	<string>CFWheels_prefs.html</string>
 	<key>DCSDictionaryXSL</key>
