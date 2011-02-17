@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<d:dictionary xmlns="http://www.w3.org/1999/xhtml" xmlns:d="http://www.apple.com/DTDs/DictionaryService-1.0.rng">
+<d:entry id="cfwheels_application" d:title="CFWheels">
+	<d:index d:value="CFWheels"/>
+
+	<span class="picture">
+		<img src="Images/dictionary.png" alt="CFWheels (http://cfwheels.org)" class="floatright"/>
+	</span>
+
+	<p>CFWheels (ColdFusion on Wheels) is an open-source ColdFusion (CFML) framework inspired by Ruby on Rails.</p>
+
+	<p>
+		It provides fast application development, a great organization system for code, and is just plain fun to use.
+	</p>
+
+	<p>
+		To find out more, go to http://cfwheels.org/
+	</p>
+
+</d:entry>
+<d:entry id="addroute" d:title="addRoute" d:parental-control="1">
+	<d:index d:value="addRoute()"/>
+
+	<span class="picture">
+		<img src="Images/dictionary.png" alt="CFWheels (http://cfwheels.org)" class="floatright"/>
+	</span>
+
+	<h1><code>addRoute()</code></h1>
+
+	<h2>Description</h2>
+	<p>  Adds a new route to your application.</p>
+
+	<h2>Function Syntax</h2>
+
+	<p><code><span class="pre">addRoute(<em>pattern</em> [, <em>name</em>, <em>controller</em>, <em>action</em> ])</span></code></p>
+
+
+	<h2>Parameters</h2>
+
+	<table>
+
+		<thead>
+			<tr>
+				<th>Parameter</th>
+				<th>Type</th>
+				<th>Required</th>
+				<th>Default</th>
+				<th>Description</th>
+
+			</tr>
+		</thead>
+		<tbody>
+
+				<tr >
+					<td valign="top"><code>name</code></td>
+					<td valign="top"><code>string</code></td>
+					<td valign="top" class="required">No</td>
+
+					<td valign="top"><code></code></td>
+					<td valign="top">  Name for the route. This is referenced as the <code>name</code> argument in functions based on <a href="/docs/1-1/function/urlfor"><code>URLFor()</code></a> like <a href="/docs/1-1/function/linkto"><code>linkTo()</code></a>, <a href="/docs/1-1/function/startformtag"><code>startFormTag()</code></a>, etc.</td>
+				</tr>
+
+
+				<tr class="highlight">
+					<td valign="top"><code>pattern</code></td>
+					<td valign="top"><code>string</code></td>
+					<td valign="top" class="required">Yes</td>
+					<td valign="top"><code></code></td>
+					<td valign="top">  The URL pattern that the route will match.</td>
+
+				</tr>
+
+				<tr >
+					<td valign="top"><code>controller</code></td>
+					<td valign="top"><code>string</code></td>
+					<td valign="top" class="required">No</td>
+					<td valign="top"><code></code></td>
+					<td valign="top">  Controller to call when route matches (unless the controller name exists in the pattern).</td>
+
+				</tr>
+
+				<tr class="highlight">
+					<td valign="top"><code>action</code></td>
+					<td valign="top"><code>string</code></td>
+					<td valign="top" class="required">No</td>
+					<td valign="top"><code></code></td>
+					<td valign="top">  Action to call when route matches (unless the action name exists in the pattern).</td>
+
+				</tr>
+
+		</tbody>
+	</table>
+
+	<h2>Examples</h2>
+	<code class="block">
+		<span id='formatted_code_12E78CB95AB8F7AC2A5539BE96D054CD' style='color:#000'><span style='color:Gray;'>&lt;!---&#32;Example&#32;1:&#32;Adds&#32;a&#32;route&#32;which&#32;will&#32;invoke&#32;the&#32;`profile`&#32;action&#32;on&#32;the&#32;`user`&#32;controller&#32;with&#32;`params.userName`&#32;set&#32;when&#32;the&#32;URL&#32;matches&#32;the&#32;`pattern`&#32;argument&#32;---&gt;</span><br /><span style='color:#990033'>&lt;cfset<span style='color:#990033'>&#32;addRoute(name=<span style='color:#1600ff'>"userProfile"</span>,&#32;pattern=<span style='color:#1600ff'>"user/[username]"</span>,&#32;controller=<span style='color:#1600ff'>"user"</span>,&#32;action=<span style='color:#1600ff'>"profile"</span>)</span>&gt;</span><br /><br /><span style='color:Gray;'>&lt;!---&#32;Example&#32;2:&#32;Category/product&#32;URLs.&#32;Note&#32;the&#32;order&#32;of&#32;precedence&#32;is&#32;such&#32;that&#32;the&#32;more&#32;specific&#32;route&#32;should&#32;be&#32;defined&#32;first&#32;so&#32;Wheels&#32;will&#32;fall&#32;back&#32;to&#32;the&#32;less-specific&#32;version&#32;if&#32;it's&#32;not&#32;found&#32;---&gt;</span><br /><span style='color:#990033'>&lt;cfset<span style='color:#990033'>&#32;addRoute(name=<span style='color:#1600ff'>"product"</span>,&#32;pattern=<span style='color:#1600ff'>"products/[categorySlug]/[productSlug]"</span>,&#32;controller=<span style='color:#1600ff'>"products"</span>,&#32;action=<span style='color:#1600ff'>"product"</span>)</span>&gt;</span><br /><span style='color:#990033'>&lt;cfset<span style='color:#990033'>&#32;addRoute(name=<span style='color:#1600ff'>"productCategory"</span>,&#32;pattern=<span style='color:#1600ff'>"products/[categorySlug]"</span>,&#32;controller=<span style='color:#1600ff'>"products"</span>,&#32;action=<span style='color:#1600ff'>"category"</span>)</span>&gt;</span><br /><span style='color:#990033'>&lt;cfset<span style='color:#990033'>&#32;addRoute(name=<span style='color:#1600ff'>"products"</span>,&#32;pattern=<span style='color:#1600ff'>"products"</span>,&#32;controller=<span style='color:#1600ff'>"products"</span>,&#32;action=<span style='color:#1600ff'>"index"</span>)</span>&gt;</span><br /><br /><span style='color:Gray;'>&lt;!---&#32;Example&#32;3:&#32;Change&#32;the&#32;`home`&#32;route.&#32;This&#32;should&#32;be&#32;listed&#32;last&#32;because&#32;it&#32;is&#32;least&#32;specific&#32;---&gt;</span><br /><span style='color:#990033'>&lt;cfset<span style='color:#990033'>&#32;addRoute(name=<span style='color:#1600ff'>"home"</span>,&#32;pattern=<span style='color:#1600ff'>""</span>,&#32;controller=<span style='color:#1600ff'>"main"</span>,&#32;action=<span style='color:#1600ff'>"index"</span>)</span>&gt;</span><br /></span>
+	</code>
+
+</d:entry>
+<d:entry id="front_back_matter" d:title="Front/Back Matter">
+	<h1><b>CFWheels</b></h1>
+	<h2>Front/Back Matter</h2>
+	<div>
+		<br/><br/>
+	</div>
+	<div>
+	</div>
+	<div>
+	</div>
+	<br/>
+</d:entry>
+</d:dictionary>
