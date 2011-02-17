@@ -1,17 +1,62 @@
 @charset "UTF-8";
 @namespace d url(http://www.apple.com/DTDs/DictionaryService-1.0.rng);
 
+body {
+	color: #151515;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+	font-size: 1em;
+}
+
 d|entry {
 }
 
+h1, h2, h3, h4, h5, h6,
+form fieldset legend {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
 h1	{
-	font-size: 150%;
+	margin-top: 0;
+	font-size: 125%;
+}
+
+h1>code	{
+	font-size: 200%;
+}
+
+h2  {
+	font-size: 125%;
+	margin: 30px 0 0 0;
 }
 
 h3	{
 	font-size: 100%;
+	margin: 25px 0 0 0;
 }
 
+p {
+	line-height: 1.5em;
+}
+
+ul {}
+	
+ul li {
+	list-style-type: square;
+}
+	
+dl {}
+
+dl dt {
+	font-weight: bold;
+}
+
+dl dd {
+	margin-bottom: 10px;
+}
+
+	
 span.column {
 	display: block;
 	border: solid 2px #c0c0c0;
@@ -21,3 +66,70 @@ span.column {
 	margin-bottom: 0.5em;
 	padding: 0.5em;
 }
+span.pre {
+	font-family: Monaco, "Courier New", Courier, monospace;
+	font-size: 13px;
+	display: block;
+	background-color: #efefef;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	padding: 0.5em 1em;
+	border: 1px solid #c6c6c6;
+}
+
+code.block {
+	font-family: Monaco, "Courier New", Courier, monospace;
+	font-size: 12px;
+	border: 1px solid #dedede;
+	border-left: 25px solid #dedede;
+	overflow: auto;
+	display: block;
+	padding: 5px;
+	padding-left: 10px;
+	white-space: pre;
+	margin-top: 20px;
+}
+
+.floatright { 
+	padding-left: 10px;
+	margin-left: 10px;
+	float: right; 
+}
+
+table {
+		border: 1px solid #333;
+		width: 100%;
+		margin-top: 20px;
+	}
+	
+table caption {
+	font-size: 1.2em;
+	text-align: left;
+}
+
+table thead {}
+
+table thead th,
+table tbody th {
+	text-align: left;
+}
+	
+table thead th {
+	border-bottom: 1px solid #ccc;
+}
+
+table tbody {}
+
+table tbody tr.highlight {
+	background: #efefef;
+}
+	
+table tbody tr td {
+	padding: 5px;
+}
+	
+table tbody tr td.required {
+	text-align: center;
+}
+
